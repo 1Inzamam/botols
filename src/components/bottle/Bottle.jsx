@@ -1,9 +1,11 @@
 import React from 'react';
 
-const bottle = () => {
+const bottle = ({bottle}) => {
+    console.log(bottle);
+
     return (
         <div>
-            
+            <img src={bottle.img} alt=""></img>
         </div>
     );
 };

@@ -7,7 +7,12 @@ const Bottles = ({bottlesPromise}) => {
         <div>
             <h3>Bottles: {bottles.length}</h3>
            {
-            bottles.map(bottle => <Bottle bottle={bottle}></Bottle>)
+            bottles.map(bottle => 
+            <Bottle 
+                key={bottle.id} 
+                bottle={bottle}>
+
+                </Bottle>)
            }
         </div>
     );
