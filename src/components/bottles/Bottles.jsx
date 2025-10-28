@@ -8,14 +8,16 @@ const Bottles = ({ bottlesPromise }) => {
     const bottles = use(bottlesPromise);
 
     const handleAddToCart = (bottle) =>{
-        console.log('handler working', bottle);
+        const newCart = [...cart, bottle];
+        setCart(newCart);
         
     }
 
-        console.log(bottles)
+        // console.log(bottles)
     return (
         <div>
             <h3>Bottles: {bottles.length}</h3>
+            <p>Added to cart: {cart.length}</p>
             <div className='bottles-container'>
                 {
                     bottles.map(bottle =>
