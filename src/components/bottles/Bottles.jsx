@@ -36,6 +36,8 @@ const storedCart = [];
 
     const handleRemoveFromCart = id =>{
         console.log('remove item', id)
+        const remainingCart = cart.filter(bottle => bottle.id !== id);
+        setCart(remainingCart);
     }
         // console.log(bottles)
     return (
